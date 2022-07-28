@@ -1,0 +1,28 @@
+.star-rating {
+  position: relative;
+  display: inline-flex;
+  &__colored {
+    display: inline-flex;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}
+
+.star {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0 3px;
+  flex-shrink: 0;
+
+  &--colored {
+    background: url("@/assets/rating_full.svg") center no-repeat;
+  }
+  &--outlined {
+    background: url("@/assets/rating_empty.svg") center no-repeat;
+  }
+}

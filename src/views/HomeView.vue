@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="">
+    <v-btn elevation="2" @click="openModal">Оставить отзыв</v-btn>
+    <FeedbackModal />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import FeedbackModal from "@/components/Modals/FeedbackModal.vue";
 
 export default {
   name: "HomeView",
   components: {
-    HelloWorld,
+    FeedbackModal,
+  },
+  methods: {
+    openModal() {
+      this.$root.$emit("openModal");
+    },
   },
 };
 </script>
